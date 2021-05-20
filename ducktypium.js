@@ -11,21 +11,21 @@ class Ducktypium {
     if(color !== 'red' && color !== 'blue' && color !== 'yellow')
       throw new Error('Error! Invalid color');
 
-      if(this.color === color) {
-        return color;
-      }
-    
-      switch(color) {
-        case 'red':
-          if(this.color === 'blue') return 'purple';
-          return 'orange';
-        case 'blue':
-          if(this.color === 'red') return 'purple';
-          return 'green';
-        case 'yellow':
-          if(this.color === 'red') return 'orange';
-          return 'green';
-      }
+    if(this.color === color) {
+      return color;
+    }
+  
+    switch(color) {
+      case 'red':
+        if(this.color === 'blue') return 'purple';
+        return 'orange';
+      case 'blue':
+        if(this.color === 'red') return 'purple';
+        return 'green';
+      case 'yellow':
+        if(this.color === 'red') return 'orange';
+        return 'green';
+    }
   }
 
   calibrate(numbers) {
